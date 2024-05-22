@@ -1,7 +1,9 @@
 import json
+#use __init__.py para poder importar mi archivo json, 
+#sirve para que Python identifique a la carpeta que lo contiene como un directorio de paquetes de Python.
+#De tal manera que podamos importar los módulos que contiene esa carpeta
 
 #genero el encabezado de la factura
-#utilizo \t para agregar tabulaciones en la impresion
 print("\tNombre\t\t|Cantidad\t|Total")
 print("----------------------------------------------")
 
