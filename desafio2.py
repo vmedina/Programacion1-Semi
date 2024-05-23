@@ -38,7 +38,7 @@ while agregarMasEstudiantes:
     ingresarOtraCalificacion  = input("Desea ingersar las calificaciones de otro estudiante? Si / No ").lower()
     
     if ingresarOtraCalificacion == "no":
-        #si no quiere agregar mas productos salgo del bucle
+        #si no quiere agregar más estudiantes salgo del bucle
         agregarMasEstudiantes = False
 
 
