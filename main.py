@@ -1,3 +1,7 @@
+#Dado un conjunto de estudiantes y sus promedios, implementa una función que cree un árbol binario de búsqueda en 
+#el que los nodos representan los promedios de los estudiantes. 
+#Luego, implementa una función que recorra el árbol en inorden para mostrar los estudiantes en orden ascendente de rendimiento académico.
+
 class Nodo:
     def __init__(self, promedio, nombre):
         self.izq = None
@@ -19,14 +23,14 @@ def insertar(raiz, promedio, nombre):
     
     return raiz
 
-# Función para recorrer el árbol en inorden y mostrar los estudiantes en orden ascendente de promedio
+# Función que recorre el árbol en inorden y muestra los estudiantes en orden ascendente de promedio
 def mostrar_en_orden(raiz):
     if raiz:
         mostrar_en_orden(raiz.izq)
         print(f"{raiz.nombre}: {raiz.promedio}")
         mostrar_en_orden(raiz.der)
 
-# Ejemplo de uso:
+
 # Lista de estudiantes con sus promedios
 estudiantes = [
     ("Juan", 85),
@@ -36,7 +40,7 @@ estudiantes = [
     ("Carlos", 88)
 ]
 
-# Creamos el árbol de búsqueda binario
+# Se crea el árbol de búsqueda binario
 raiz = None
 for nombre, promedio in estudiantes:
     raiz = insertar(raiz, promedio, nombre)
