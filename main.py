@@ -1,0 +1,46 @@
+class Nodo:
+    def __init__(self, promedio, nombre):
+        self.izq = None
+        self.der = None
+        self.promedio = promedio
+        self.nombre = nombre
+
+# Función para insertar un nuevo nodo en el árbol binario de búsqueda
+def insertar(raiz, promedio, nombre):
+    # Si el árbol está vacío, crea un nuevo nodo y lo devuelve
+    if raiz is None:
+        return Nodo(promedio, nombre)
+    
+    # Si el promedio es menor que el nodo actual, ve a la izquierda
+    if promedio < raiz.promedio:
+        raiz.izq = insertar(raiz.izq, promedio, nombre)
+    else:  # Si el promedio es mayor o igual, ve a la derecha
+        raiz.der = insertar(raiz.der, promedio, nombre)
+    
+    return raiz
+
+# Función para recorrer el árbol en inorden y mostrar los estudiantes en orden ascendente de promedio
+def mostrar_en_orden(raiz):
+    if raiz:
+        mostrar_en_orden(raiz.izq)
+        print(f"{raiz.nombre}: {raiz.promedio}")
+        mostrar_en_orden(raiz.der)
+
+# Ejemplo de uso:
+# Lista de estudiantes con sus promedios
+estudiantes = [
+    ("Juan", 85),
+    ("Ana", 90),
+    ("Luis", 78),
+    ("Maria", 92),
+    ("Carlos", 88)
+]
+
+# Creamos el árbol de búsqueda binario
+raiz = None
+for nombre, promedio in estudiantes:
+    raiz = insertar(raiz, promedio, nombre)
+
+# Mostrar los estudiantes en orden ascendente de promedio
+print("Estudiantes en orden ascendente de promedio:")
+mostrar_en_orden(raiz)
