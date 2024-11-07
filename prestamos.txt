@@ -1,0 +1,9 @@
+1, Cien años de soledad, Gabriel García Márquez, 2024-01-10
+2, Don Quijote de la Mancha, Miguel de Cervantes, 2024-01-15
+3, 1984, George Orwell, 2024-02-05
+4, Orgullo y prejuicio, Jane Austen, 2024-02-20
+5, Matar a un ruiseñor, Harper Lee, 2024-03-01
+6, La Odisea, Homero, 2024-03-10
+7, En busca del tiempo perdido, Marcel Proust, 2024-04-01
+8, Ulises, James Joyce, 2024-04-15
+9, El gran Gatsby, F. Scott Fitzgerald, 2024-05-01
